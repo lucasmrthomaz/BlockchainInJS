@@ -17,7 +17,7 @@ class Block {
     generateHash() {
         return sha256(this.index + this.previousHash + JSON.stringify(this.data) + this.timestamp + this.nonce).toString()
     }
-
+    //Mineracao do chain
     mine() {
         this.hash = this.generateHash()
 

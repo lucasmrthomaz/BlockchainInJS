@@ -43,10 +43,12 @@ class Blockchain {
     }
     
     //Converte o objeto blockchain em JSON
+    /*
     toJSON(){
-        const JSON_OBJECT = JSON.stringify(Blockchain.block);
+        const JSON_OBJECT = JSON.stringify(Blockchain)
         return JSON_OBJECT;
     }
+    */
 
 }
 
