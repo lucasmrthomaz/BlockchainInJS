@@ -1,5 +1,7 @@
 const Block = require('./block')
 
+/* Classe Blockchain, com os 
+devidos construtores da classe */
 class Blockchain {
     constructor(difficulty = 1) {
         this.blocks = [new Block()]
@@ -7,10 +9,12 @@ class Blockchain {
         this.difficulty = difficulty
     }
 
+    // Retorna o ultimo bloco
     getLastBlock() {
         return this.blocks[this.blocks.length - 1]
     }
 
+    //Adiciona um novo bloco ao chain
     addBlock(data) {
         const index = this.index
         const difficulty = this.difficulty
@@ -22,6 +26,7 @@ class Blockchain {
         this.blocks.push(block)
     }
 
+    //Verifica se eh um bloco valido
     isValid() {
         for (let i = 1; i < this.blocks.length; i++) {
             const currentBlock = this.blocks[i]

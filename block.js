@@ -1,6 +1,6 @@
 const sha256 = require('crypto-js/sha256')
 
-//Constroi o bloco e inicializa os valoores
+//Constroi o bloco e inicializa os valores
 class Block {
     constructor(index = 0, previousHash = null, data = 'Genesis block', difficulty = 1) {
         this.index = index
@@ -17,6 +17,7 @@ class Block {
     generateHash() {
         return sha256(this.index + this.previousHash + JSON.stringify(this.data) + this.timestamp + this.nonce).toString()
     }
+    
     //Mineracao do chain
     mine() {
         this.hash = this.generateHash()
