@@ -28,4 +28,3 @@ console.log(blockchain.isValid())
 blockchain.blocks[1].data.amount = 30000
 console.log(blockchain.isValid())
 
-
