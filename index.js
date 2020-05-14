@@ -1,9 +1,6 @@
-var express = require('express');
-var app = express();
-const API = require('./API')
 const Blockchain = require('./blockchain')
-const proofWorkStd = require('./proofWork')
-
+var express = require('express')
+//const proofWorkStd = require('./proofWork')
 
 //Instancia/Inicia um novo Blockchain
 const blockchain = new Blockchain()
@@ -20,8 +17,25 @@ blockchain.addBlock({ amount: 150 })
 //Imprime no console os blocos adicionados ao chain
 console.log(blockchain)
 
+//const proofWorkStd = require('./proofWork')
+
 //Faz o trabalho de proof
-//console.log(proofWork.doWork())
+//proofWork.doWork()
+
+var app = express();
+
+/* express: Ao digitar no browser
+localhost:3000 retornar um objeto JSON */
+app.get('/', function (req, res) {
+    const JSON_Object = JSON.stringify(blockchain)
+    res.send(blockchain)
+});
+
+/* express: Efetiva a inicilizacao de 
+uma nova instancia do express */
+app.listen(3000, function () {
+  console.log('Express rodando na porta 3000!');
+});
 
 //Verifica se eh um bloco valido
 console.log(blockchain.isValid())
