@@ -5,4 +5,4 @@
 > Blockchain Wallet
 
 ## Mining Blockchain ##
->> Mining
+> Mining
