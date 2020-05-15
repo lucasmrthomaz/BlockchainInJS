@@ -9,4 +9,4 @@
 
 ## Developed by Mercadata Digital Team ##
 > Lucas Thomaz <lucas@mercadata.com.br>
-> Vincius, Antonio <vinicius@mercadata.com.br>
+>> Vincius <vinicius@mercadata.com.br>
