@@ -1,4 +1,4 @@
-## Stadart Blockchain and Advanced blockchain ##
+## Stadart Blockchain and Advanced Blockchain ##
 > Blockchain
 
 ## Wallet ##
